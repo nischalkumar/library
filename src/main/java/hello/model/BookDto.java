@@ -12,6 +12,7 @@ import javax.persistence.Table;
 @Table(name = "book")
 public class BookDto {
     @Id
+    @Column(length = 150)
     String id;
     @Column
     String title;
@@ -24,6 +25,13 @@ public class BookDto {
 
     public String getAuthor() {
         return author;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public BookDto() {
     }
 
     public BookDto(String id, String title, String author) {
